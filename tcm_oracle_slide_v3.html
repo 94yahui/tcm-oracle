@@ -1,0 +1,136 @@
+<style>
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  .slide {
+    background: #0c1a30;
+    width: 100%;
+    aspect-ratio: 16/9;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    padding: 4.5% 6%;
+    box-sizing: border-box;
+    font-family: Georgia, serif;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 70px;
+  }
+
+  .br {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 70px;
+    height: 70px;
+  }
+
+  .header {
+    margin-bottom: 5%;
+  }
+
+  .tag {
+    font-size: clamp(9px, 0.9vw, 12px);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #c8a43c;
+    margin-bottom: 6px;
+  }
+
+  .main-title {
+    font-size: clamp(22px, 3.2vw, 38px);
+    color: #e8d9b0;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+  }
+
+  .grid {
+    display: grid;
+    /* 调整为两列布局，每列平分空间 */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: clamp(12px, 2vw, 24px);
+    height: 100%;
+    align-items: stretch;
+  }
+
+  .card {
+    background: rgba(200, 164, 60, 0.06);
+    border: 0.5px solid rgba(200, 164, 60, 0.2);
+    border-radius: 8px;
+    padding: clamp(15px, 2vw, 28px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .card-label {
+    font-size: clamp(8px, 0.8vw, 11px);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #c8a43c;
+    opacity: 0.8;
+    margin-bottom: 8px;
+  }
+
+  .card-title {
+    font-size: clamp(18px, 2.6vw, 32px);
+    color: #e8d9b0;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+
+  .card-desc {
+    font-size: clamp(13px, 1.1vw, 18px);
+    color: rgba(232, 217, 176, 0.45);
+    line-height: 1.4;
+  }
+</style>
+
+<div class="slide">
+  <div class="tl"></div>
+  <div class="br"></div>
+
+  <div class="header">
+    <div class="tag">Project overview</div>
+    <div class="main-title">TCM Oracle &nbsp;·&nbsp; <span
+        style="color:rgba(232,217,176,0.45);font-size:0.75em;">Personalized TCM Dietary Recommendation System</span>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="card-label">Local LLM</div>
+      <div class="card-title">Qwen 2.5</div>
+      <div class="card-desc">4 GB · Local environment execution</div>
+    </div>
+    
+    <div class="card">
+      <div class="card-label">RAG Architecture</div>
+      <div class="card-title">RAG</div>
+      <div class="card-desc">Retrieval-Augmented Generation for knowledge accuracy</div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">Agent Capability Tool</div>
+      <div class="card-title">Report Generation</div>
+      <div class="card-desc">Automated personalized health summaries</div>
+    </div>
+
+    <div class="card">
+      <div class="card-label">Dev Tools</div>
+      <div class="card-title">Claude</div>
+      <div class="card-desc">Code generation and logic optimization</div>
+    </div>
+
+  </div>
+</div>
